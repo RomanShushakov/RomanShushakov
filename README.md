@@ -1,4 +1,4 @@
-# Hi, I'm Roman 👋
+# Hello, I'm Roman 👋
 
 I'm a software engineer currently working as a **full-stack developer**, with a strong personal interest in **numerical methods, GPU computing, and performance-oriented systems**.
 
