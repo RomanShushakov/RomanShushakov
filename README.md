@@ -35,7 +35,7 @@ It’s not intended to be a production FEA solver, but rather a way to understan
 
 As this work evolved, parts of the GPU solver path were extracted into a native backend:
 
-- [`wgpu-solver-backend`](https://github.com/RomanShushakov/wgpu-solver-backend) — a **`wgpu`-based backend** for sparse iterative solvers (PCG with Block-Jacobi preconditioning), ported from the WebGPU implementation used in `fea_app`.
+- [`wgpu_solver_backend`](https://github.com/RomanShushakov/wgpu_solver_backend) — a **`wgpu`-based backend** for sparse iterative solvers (PCG with Block-Jacobi preconditioning), ported from the WebGPU implementation used in `fea_app`.
 
 Supporting crates explore individual layers of the stack:
 
