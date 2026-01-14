@@ -41,6 +41,10 @@ That backend is then exercised in a scheduler-driven environment:
 
 - [`wgpu_solver_slurm`](https://github.com/RomanShushakov/wgpu_solver_slurm) — a small **Slurm + Apptainer sandbox** used to run the solver as a scheduled GPU job, focusing on execution, isolation, and accounting rather than performance or scale.
 
+Conceptually, these projects form a simple pipeline: **FEM assembly → sparse linear algebra → iterative solvers → GPU execution → scheduled runs**.
+
+In code, that pipeline is explored through: `finite_element_method` → `iterative_solvers` / `colsol` → `fea_app` → `wgpu_solver_backend` → `wgpu_solver_slurm`.
+
 Supporting crates explore individual layers of the stack:
 
 - `finite_element_method` — FEM building blocks and assembly helpers  
