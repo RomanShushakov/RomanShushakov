@@ -37,6 +37,10 @@ As this work evolved, parts of the GPU solver path were extracted into a native 
 
 - [`wgpu_solver_backend`](https://github.com/RomanShushakov/wgpu_solver_backend) — a **`wgpu`-based backend** for sparse iterative solvers (PCG with Block-Jacobi preconditioning), ported from the WebGPU implementation used in `fea_app`.
 
+That backend is then exercised in a scheduler-driven environment:
+
+- [`wgpu_solver_slurm`](https://github.com/RomanShushakov/wgpu_solver_slurm) — a small **Slurm + Apptainer sandbox** used to run the solver as a scheduled GPU job, focusing on execution, isolation, and accounting rather than performance or scale.
+
 Supporting crates explore individual layers of the stack:
 
 - `finite_element_method` — FEM building blocks and assembly helpers  
