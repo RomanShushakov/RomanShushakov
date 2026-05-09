@@ -51,6 +51,18 @@ Supporting crates explore individual layers of the stack:
 - `iterative_solvers` — CPU implementations of CG / PCG  
 - `colsol` — direct-solver experiments (LDLᵀ / column-oriented elimination)
 
+As a separate side lab focused on understanding the infrastructure layers behind modern AI systems, I also maintain:
+
+- [`ai_platform`](https://github.com/RomanShushakov/ai_platform) — an experimental Rust-based AI infrastructure sandbox combining:
+  - K3s orchestration
+  - Slurm batch scheduling
+  - llama.cpp inference
+  - RAG pipelines
+  - LoRA fine-tuning
+  - GPU workloads on Jetson Orin Nano hardware
+
+The goal of this project is not to build a production AI platform, but rather to understand how modern AI systems are assembled technically — from model runtimes and embeddings to retrieval, orchestration, scheduling, storage, and GPU execution.
+
 ---
 
 ## Interests going forward
