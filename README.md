@@ -1,91 +1,100 @@
-# Hello, I'm Roman 👋
+# Hi, I'm Roman 👋
 
-I'm a software engineer currently working as a **full-stack developer**, with a strong personal interest in **numerical methods, GPU computing, and performance-oriented systems**.
+I'm a software engineer interested in **GPU computing, numerical software, HPC, and performance-oriented systems**.
 
-My background is a bit unconventional:
+I currently work professionally as a full-stack engineer, while my personal work focuses increasingly on **Rust, GPU execution, numerical computing, and heterogeneous systems**.
 
-- I studied **linear algebra, numerical methods, and mechanics** at university.
-- I previously worked as a **mechanical / structural (FEA) engineer**, using tools like **ANSYS** and **Abaqus** for stress analysis.
-- Over time, I became increasingly interested in how these systems work internally — both mathematically and computationally.
-- That curiosity eventually led me into **software engineering**, where I took the most accessible entry path at the time: **web development**.
+Before moving into software engineering, I worked in mechanical / structural engineering and used **ANSYS and Abaqus** for finite-element analysis. That background is still a major influence on the kinds of software problems I enjoy exploring: numerical methods, solvers, parallel computation, and the systems underneath them.
+
+## Selected projects
+
+### [GPU Systems Lab](https://github.com/RomanShushakov/gpu_systems_lab)
+
+A hands-on exploration of GPU-oriented systems programming in Rust, progressing from low-level interoperability to a small heterogeneous compute framework.
+
+The project covers:
+
+- Rust ↔ C / C++ FFI
+- Vulkan compute with `ash`
+- explicit GPU resource ownership and synchronization
+- GPU memory pooling and suballocation
+- device-local memory and staging transfers
+- compute graphs and dependency scheduling
+- multi-workgroup reductions and numerical GPU kernels
+- CPU / GPU execution backends
+- JSON-driven mini compute framework
+- ARM64 cross-compilation
+- Vulkan workloads on **NVIDIA Jetson Orin Nano via Slurm**
+
+The lab intentionally builds these layers explicitly rather than hiding them behind a high-level GPU framework.
 
 ---
 
-## What I work on now
+### [fea_app](https://github.com/RomanShushakov/fea_app)
 
-Professionally, I work as a **full-stack engineer**, building web applications and systems end-to-end.
+A browser-based finite-element–style application built from scratch using **Rust, WebAssembly, WebGL, and WebGPU**.
 
-Alongside that, I maintain a set of personal projects that reconnect my engineering background with software development and computation:
+It explores the pipeline from engineering data structures to numerical execution and visualization:
 
-- **Numerical linear algebra and iterative solvers**
-- **GPU computing** for both *graphics* and *general computation*
-- **Web-based compute** via **WebGL / WebGPU**
-- **Rust** for performance-oriented and systems-level code
-- Architectural patterns for **scientific and engineering software**
-
-A central project in this space is:
-- [`fea_app`](https://github.com/RomanShushakov/fea_app) — a browser-based finite-element–style application built from scratch.
-
-It’s not intended to be a production FEA solver, but rather a way to understand the full pipeline:
-
-- FEM-style data structures and assembly
-- sparse linear algebra and solver workflows
+- FEM-style assembly
+- sparse linear algebra
+- CG / PCG iterative solvers
+- Block-Jacobi preconditioning
 - GPU compute kernels and reductions
-- interaction between compute and visualization in modern browsers
+- WebGPU computation
+- WebGL visualization
+- Rust compiled to WebAssembly
 
-As this work evolved, parts of the GPU solver path were extracted into a native backend:
-
-- [`wgpu_solver_backend`](https://github.com/RomanShushakov/wgpu_solver_backend) — a **`wgpu`-based backend** for sparse iterative solvers (PCG with Block-Jacobi preconditioning), ported from the WebGPU implementation used in `fea_app`.
-
-That backend is then exercised in a scheduler-driven environment:
-
-- [`wgpu_solver_slurm`](https://github.com/RomanShushakov/wgpu_solver_slurm) — a small **Slurm + Apptainer sandbox** used to run the solver as a scheduled GPU job, focusing on execution, isolation, and accounting rather than performance or scale.
-
-Conceptually, these projects form a simple pipeline: **FEM assembly → sparse linear algebra → iterative solvers → GPU execution → scheduled runs**.
-
-In code, that pipeline is explored through: `finite_element_method` → `iterative_solvers` / `colsol` → `fea_app` → `wgpu_solver_backend` → `wgpu_solver_slurm`.
-
-Supporting crates explore individual layers of the stack:
-
-- `finite_element_method` — FEM building blocks and assembly helpers  
-- `iterative_solvers` — CPU implementations of CG / PCG  
-- `colsol` — direct-solver experiments (LDLᵀ / column-oriented elimination)
-
-As a separate side lab focused on understanding the infrastructure layers behind modern AI systems, I also maintain:
-
-- [`ai_platform`](https://github.com/RomanShushakov/ai_platform) — an experimental Rust-based AI infrastructure sandbox combining:
-  - K3s orchestration
-  - Slurm batch scheduling
-  - llama.cpp inference
-  - RAG pipelines
-  - LoRA fine-tuning
-  - GPU workloads on Jetson Orin Nano hardware
-
-The goal of this project is not to build a production AI platform, but rather to understand how modern AI systems are assembled technically — from model runtimes and embeddings to retrieval, orchestration, scheduling, storage, and GPU execution.
+Related experiments include [`wgpu_solver_backend`](https://github.com/RomanShushakov/wgpu_solver_backend) and [`wgpu_solver_slurm`](https://github.com/RomanShushakov/wgpu_solver_slurm), extending the solver path from browser GPU execution toward native and scheduled workloads.
 
 ---
 
-## Interests going forward
+### [ai_platform](https://github.com/RomanShushakov/ai_platform)
 
-While I currently work in web development, my long-term interests are gradually shifting back toward:
+An experimental infrastructure lab for understanding how AI workloads fit into heterogeneous compute environments.
 
-- **numerical computing and solver development**
-- **GPU-accelerated computation**
-- **scientific and engineering software**
-- and, step by step, **HPC-style workloads** — both native and browser-based
+It combines experiments around:
 
-I enjoy learning by building things end-to-end, from mathematical formulations and data structures down to execution models, memory movement, and performance characteristics.
+- Rust-based tooling
+- Slurm scheduling
+- K3s
+- RAG pipelines
+- llama.cpp inference
+- LoRA fine-tuning
+- shared storage and GPU workloads
+- Raspberry Pi + NVIDIA Jetson hardware
 
----
-
-## Tech I enjoy working with
-
-- **Languages**: Rust, TypeScript, JavaScript  
-- **Compute & Graphics**: WebGPU, WebGL, wgpu  
-- **Domains**: numerical methods, linear algebra, FEM concepts  
-- **General**: performance-aware programming, system design, tooling  
+The focus is on understanding the infrastructure layers rather than building a production AI platform.
 
 ---
 
-Thanks for stopping by 🙂
+## What I'm interested in
 
+My main technical interests are:
+
+- **GPU computing** — Vulkan, WebGPU, compute shaders
+- **Numerical computing** — sparse linear algebra, iterative solvers, FEM
+- **HPC and heterogeneous execution** — scheduling, GPU workloads, distributed compute infrastructure
+- **Rust and systems programming**
+- **WebAssembly and browser-native compute**
+- building abstractions without losing sight of what happens underneath them
+
+I particularly enjoy projects that connect multiple layers:
+
+**algorithms → memory → GPU execution → runtime → infrastructure**
+
+## Tech
+
+**Languages:** Rust · TypeScript · JavaScript · Python
+
+**GPU / Compute:** Vulkan · `ash` · WebGPU · WGSL · WebGL · `wgpu`
+
+**Systems / HPC:** Slurm · Linux · Ansible · NFS · Apptainer · ARM64 · NVIDIA Jetson
+
+**Web / Backend:** Angular · Vue · NestJS · Node.js · Redis · Kafka · Kubernetes
+
+**Numerical:** sparse matrices · CG / PCG · Jacobi / Block-Jacobi · FEM concepts
+
+---
+
+I'm currently especially interested in opportunities around **Rust, GPU computing, numerical software, HPC, and performance-oriented engineering**.
