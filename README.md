@@ -30,7 +30,7 @@ The lab intentionally builds these layers explicitly rather than hiding them beh
 
 ---
 
-### [fea_app](https://github.com/RomanShushakov/fea_app)
+### [FEA App](https://github.com/RomanShushakov/fea_app)
 
 A browser-based finite-element–style application built from scratch using **Rust, WebAssembly, WebGL, and WebGPU**.
 
@@ -49,7 +49,7 @@ Related experiments include [`wgpu_solver_backend`](https://github.com/RomanShus
 
 ---
 
-### [ai_platform](https://github.com/RomanShushakov/ai_platform)
+### [AI Platform](https://github.com/RomanShushakov/ai_platform)
 
 An experimental infrastructure lab for understanding how AI workloads fit into heterogeneous compute environments.
 
