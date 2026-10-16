@@ -85,15 +85,15 @@ I particularly enjoy projects that connect multiple layers:
 
 ## Tech
 
-**Languages:** Rust · TypeScript · JavaScript · Python
+**Languages:** Rust / TypeScript / JavaScript / Python
 
-**GPU / Compute:** Vulkan · `ash` · WebGPU · WGSL · WebGL · `wgpu`
+**GPU / Compute:** Vulkan / `ash` / WebGPU / WGSL / WebGL / `wgpu`
 
-**Systems / HPC:** Slurm · Linux · Ansible · NFS · Apptainer · ARM64 · NVIDIA Jetson
+**Systems / HPC:** Slurm / Linux / Ansible / NFS / Apptainer / ARM64 / NVIDIA Jetson
 
-**Web / Backend:** Angular · Vue · NestJS · Node.js · Redis · Kafka · Kubernetes
+**Web / Backend:** Angular / Vue / NestJS / Node.js / Redis / Kafka / Kubernetes
 
-**Numerical:** sparse matrices · CG / PCG · Jacobi / Block-Jacobi · FEM concepts
+**Numerical:** sparse matrices / CG / PCG / Jacobi / Block-Jacobi / FEM concepts
 
 ---
 
