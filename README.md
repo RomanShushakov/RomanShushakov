@@ -14,7 +14,7 @@ A hands-on exploration of GPU-oriented systems programming in Rust, progressing 
 
 The project covers:
 
-- Rust ↔ C / C++ FFI
+- Rust <-> C / C++ FFI
 - Vulkan compute with `ash`
 - explicit GPU resource ownership and synchronization
 - GPU memory pooling and suballocation
@@ -72,16 +72,16 @@ The focus is on understanding the infrastructure layers rather than building a p
 
 My main technical interests are:
 
-- **GPU computing** — Vulkan, WebGPU, compute shaders
-- **Numerical computing** — sparse linear algebra, iterative solvers, FEM
-- **HPC and heterogeneous execution** — scheduling, GPU workloads, distributed compute infrastructure
+- **GPU computing** - Vulkan, WebGPU, compute shaders
+- **Numerical computing** - sparse linear algebra, iterative solvers, FEM
+- **HPC and heterogeneous execution** - scheduling, GPU workloads, distributed compute infrastructure
 - **Rust and systems programming**
 - **WebAssembly and browser-native compute**
 - building abstractions without losing sight of what happens underneath them
 
 I particularly enjoy projects that connect multiple layers:
 
-**algorithms → memory → GPU execution → runtime → infrastructure**
+**algorithms -> memory -> GPU execution -> runtime -> infrastructure**
 
 ## Tech
 
