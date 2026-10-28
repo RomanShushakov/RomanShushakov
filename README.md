@@ -96,7 +96,7 @@ The focus is on understanding the infrastructure layers rather than building a p
 My main technical interests are:
 
 - **GPU computing** - Vulkan, WebGPU, compute shaders
-- **Numerical computing** - sparse linear algebra, iterative solvers, FEM
+- **Numerical computing** - sparse linear algebra, iterative solvers, FEM, eigenvalue problems, quantum simulation
 - **HPC and heterogeneous execution** - scheduling, GPU workloads, distributed compute infrastructure
 - **Rust and systems programming**
 - **WebAssembly and browser-native compute**
@@ -116,7 +116,9 @@ I particularly enjoy projects that connect multiple layers:
 
 **Web / Backend:** Angular, Vue, NestJS, Node.js, Redis, Kafka, Kubernetes
 
-**Numerical:** sparse matrices, CG, PCG, Jacobi, Block-Jacobi, FEM concepts
+**Numerical:** sparse matrices, CG, PCG, Jacobi, Block-Jacobi, FEM concepts, eigenvalue solvers, VQE
+
+**Quantum:** Qiskit, IBM Quantum, state-vector simulation
 
 ---
 
