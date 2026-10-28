@@ -49,6 +49,29 @@ Related experiments include [`wgpu_solver_backend`](https://github.com/RomanShus
 
 ---
 
+### [Quantum Compute Lab](https://github.com/RomanShushakov/quantum_compute_lab)
+
+A personal learning project exploring quantum algorithms, numerical methods, and CPU/GPU state-vector simulation.
+
+The project started with Python and Qiskit experiments and gradually expanded into Rust implementations and experiments on IBM quantum hardware.
+
+It covers:
+
+- quantum gates, Bell states, and basic quantum algorithms
+- Qiskit Aer simulation and IBM QPU experiments
+- classical eigenvalue solvers and variational quantum eigensolvers (VQE)
+- CPU state-vector simulation in Rust
+- Vulkan compute shaders using `ash`, WGSL, and Naga
+- GPU-resident quantum circuits and synchronization
+- Vulkan timestamp queries and CPU/GPU performance benchmarks
+- numerical comparisons between classical solvers, ideal simulations, and real quantum hardware
+
+The main experiment compares solutions to a small generalized eigenvalue problem using classical Jacobi, CPU/GPU VQE, Qiskit Aer, and an IBM QPU.
+
+The focus is on understanding the algorithms, numerical accuracy, and hardware limitations rather than demonstrating quantum advantage.
+
+---
+
 ### [AI Platform](https://github.com/RomanShushakov/ai_platform)
 
 An experimental infrastructure lab for understanding how AI workloads fit into heterogeneous compute environments.
